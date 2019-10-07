@@ -1,0 +1,4 @@
+title: Movies
+modelClass: LincolnBrito\Movies\Models\Movie
+toolbar:
+    buttons: reorder_toolbar

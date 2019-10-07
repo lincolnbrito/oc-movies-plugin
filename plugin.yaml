@@ -1,0 +1,11 @@
+plugin:
+    name: 'lincolnbrito.movies::lang.plugin.name'
+    description: 'lincolnbrito.movies::lang.plugin.description'
+    author: 'Lincoln Brito'
+    icon: oc-icon-video-camera
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Movies
+        url: lincolnbrito/movies/movies
+        icon: icon-video-camera

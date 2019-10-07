@@ -1,0 +1,10 @@
+name: Movies
+form: $/lincolnbrito/movies/models/movie/fields.yaml
+modelClass: LincolnBrito\Movies\Models\Movie
+defaultRedirect: lincolnbrito/movies/movies
+create:
+    redirect: 'lincolnbrito/movies/movies/update/:id'
+    redirectClose: lincolnbrito/movies/movies
+update:
+    redirect: lincolnbrito/movies/movies
+    redirectClose: lincolnbrito/movies/movies
