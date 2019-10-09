@@ -20,4 +20,12 @@ class Genre extends Model
      */
     public $rules = [
     ];
+
+    public $belongsToMany = [
+        'movies' => [
+            'LincolnBrito\Movies\Models\Movie',
+            'table' => 'lincolnbrito_movies_movies_genres',
+            'order' => 'name'
+        ]
+    ];
 }
