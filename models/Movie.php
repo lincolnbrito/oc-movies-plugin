@@ -31,4 +31,12 @@ class Movie extends Model
     public $attachMany = [
         'movie_gallery' => 'System\Models\File'
     ];
+
+    public $belongsToMany = [
+        'genres' => [
+            'LincolnBrito\Movies\Models\Genre',
+            'table' => 'lincolnbrito_movies_movies_genres',
+            'order' => 'genre_title'
+        ]
+    ];
 }

@@ -15,3 +15,6 @@
 1.0.6:
     - 'Updated table lincolnbrito_movies_genres'
     - builder_table_update_lincolnbrito_movies_genres.php
+1.0.7:
+    - 'Created table lincolnbrito_movies_movies_genres'
+    - builder_table_create_lincolnbrito_movies_movies_genres.php
