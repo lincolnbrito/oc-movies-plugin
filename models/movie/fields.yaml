@@ -30,3 +30,12 @@ fields:
             extension: auto
         span: auto
         type: fileupload
+    movie_gallery:
+        label: 'Movie Gallery'
+        span: auto
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        type: fileupload
