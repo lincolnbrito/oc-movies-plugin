@@ -1,0 +1,10 @@
+name: Genres
+form: $/lincolnbrito/movies/models/genre/fields.yaml
+modelClass: LincolnBrito\Movies\Models\Genre
+defaultRedirect: lincolnbrito/movies/genres
+create:
+    redirect: 'lincolnbrito/movies/genres/update/:id'
+    redirectClose: lincolnbrito/movies/genres
+update:
+    redirect: lincolnbrito/movies/genres
+    redirectClose: lincolnbrito/movies/genres

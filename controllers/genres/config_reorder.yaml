@@ -1,0 +1,5 @@
+title: Genres
+modelClass: LincolnBrito\Movies\Models\Genre
+nameFrom: genre_title
+toolbar:
+    buttons: reorder_toolbar

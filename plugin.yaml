@@ -9,3 +9,8 @@ navigation:
         label: Movies
         url: lincolnbrito/movies/movies
         icon: icon-video-camera
+        sideMenu:
+            side-menu-item:
+                label: Genres
+                url: lincolnbrito/movies/genres
+                icon: icon-tag
