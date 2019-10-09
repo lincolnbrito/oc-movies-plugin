@@ -21,6 +21,8 @@ class Movie extends Model
     public $rules = [
     ];
 
+    public $jsonable = ['actors'];
+
     /**
      * Relations
      */
