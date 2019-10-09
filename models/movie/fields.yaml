@@ -12,3 +12,21 @@ fields:
         label: Year
         span: auto
         type: text
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: name
+            type: slug
+        type: text
+    poster:
+        label: 'Movie Poster'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
