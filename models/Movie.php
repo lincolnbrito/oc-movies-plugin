@@ -39,6 +39,11 @@ class Movie extends Model
             'LincolnBrito\Movies\Models\Genre',
             'table' => 'lincolnbrito_movies_movies_genres',
             'order' => 'genre_title'
+        ],
+        'actors' => [
+            'LincolnBrito\Movies\Models\Actor',
+            'table' => 'lincolnbrito_movies_actors_movies',
+            'order' => 'name'
         ]
     ];
 }

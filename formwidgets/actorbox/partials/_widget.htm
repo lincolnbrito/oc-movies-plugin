@@ -1,7 +1,10 @@
 <div class="form-group widget-field">
-    <select class="s2" name="" id="" multiple>
-        <option value="1">Teste 1</option>
-        <option value="2">Teste 2</option>
-        <option value="3">Teste 3</option>
+    <select class="s2" name="<?php echo $name; ?>" id="" multiple>
+    <?php foreach($actors as $key => $value): ?>
+        <option 
+            value="<?php echo $key?>"
+            <?php echo in_array($key, $selectedValues) ? 'selected="selected"' : ''?>
+        ><?php echo $value; ?></option>
+    <?php endforeach; ?>
     </select>
 </div>

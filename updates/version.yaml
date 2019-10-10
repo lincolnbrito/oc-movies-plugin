@@ -24,3 +24,9 @@
 1.0.9:
     - 'Created table lincolnbrito_movies_actors'
     - builder_table_create_lincolnbrito_movies_actors.php
+1.0.10:
+    - 'Updated table lincolnbrito_movies_'
+    - builder_table_update_lincolnbrito_movies__4.php
+1.0.11:
+    - 'Created table lincolnbrito_movies_actors_movies'
+    - builder_table_create_lincolnbrito_movies_actors_movies.php

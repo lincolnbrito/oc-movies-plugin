@@ -20,4 +20,17 @@ class Actor extends Model
      */
     public $rules = [
     ];
+
+    public $belongsToMany = [
+        'movies' => [
+            'LincolnBrito\Movies\Models\Movie',
+            'table' => 'lincolnbrito_movies_actors_movies',
+            'order' => 'name'
+        ]
+    ];
+
+    public function getFullNameAttribute()
+    {
+        return $this->name . " " . $this->lastname;
+    }
 }

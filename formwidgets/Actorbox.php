@@ -2,6 +2,7 @@
 
 use Backend\Classes\FormWidgetBase;
 use Config;
+use LincolnBrito\Movies\Models\Actor;
 
 class Actorbox extends FormWidgetBase
 {
@@ -14,8 +15,16 @@ class Actorbox extends FormWidgetBase
         ];
     }
 
+    public function prepareVars() {
+        $this->vars['id'] = $this->model->id;
+        $this->vars['actors'] = Actor::all()->lists('full_name','id');
+        $this->vars['name'] = $this->getFieldName()."[]";
+        $this->vars['selectedValues'] = $this->getLoadValue();
+    }
+
     public function render()
     {
+        $this->prepareVars();        
         return $this->makePartial('widget');
     }
 
