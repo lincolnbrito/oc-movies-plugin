@@ -11,4 +11,11 @@ class Plugin extends PluginBase
     public function registerSettings()
     {
     }
+
+    public function registerFormWidgets()
+    {
+        return [
+            'LincolnBrito\Movies\FormWidgets\Actorbox' => 'actorbox'
+        ];
+    }
 }
