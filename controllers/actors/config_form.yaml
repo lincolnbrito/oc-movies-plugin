@@ -1,0 +1,10 @@
+name: Actors
+form: $/lincolnbrito/movies/models/actor/fields.yaml
+modelClass: LincolnBrito\Movies\Models\Actor
+defaultRedirect: lincolnbrito/movies/actors
+create:
+    redirect: 'lincolnbrito/movies/actors/update/:id'
+    redirectClose: lincolnbrito/movies/actors
+update:
+    redirect: lincolnbrito/movies/actors
+    redirectClose: lincolnbrito/movies/actors

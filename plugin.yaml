@@ -14,3 +14,7 @@ navigation:
                 label: Genres
                 url: lincolnbrito/movies/genres
                 icon: icon-tag
+            side-menu-item2:
+                label: Actors
+                url: lincolnbrito/movies/actors
+                icon: icon-user

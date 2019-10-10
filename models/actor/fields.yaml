@@ -1,0 +1,9 @@
+fields:
+    name:
+        label: 'First Name'
+        span: auto
+        type: text
+    lastname:
+        label: 'Last Name'
+        span: auto
+        type: text
