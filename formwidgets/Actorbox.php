@@ -22,6 +22,8 @@ class Actorbox extends FormWidgetBase
     public function loadAssets()
     {
         $this->addCss('css/select2.min.css');
+        $this->addCss('css/custom.css');
         $this->addJs('js/select2.full.min.js');
+        $this->addJs('js/select2.custom.js');
     }
 }

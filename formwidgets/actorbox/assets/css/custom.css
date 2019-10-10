@@ -1,0 +1,9 @@
+.select2-container {
+    width: 80% !important;
+    float:left;
+    /* display: inline-block; */
+}
+.select2-container--default .select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple{
+    border: 1px solid #d1d6d9!important;
+}
