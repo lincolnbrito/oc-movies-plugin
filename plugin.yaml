@@ -10,11 +10,15 @@ navigation:
         url: lincolnbrito/movies/movies
         icon: icon-video-camera
         sideMenu:
-            side-menu-item:
+            side-menu-item1:
+                label: Movies
+                url: lincolnbrito/movies/movies
+                icon: icon-video-camera
+            side-menu-item2:
                 label: Genres
                 url: lincolnbrito/movies/genres
                 icon: icon-tag
-            side-menu-item2:
+            side-menu-item3:
                 label: Actors
                 url: lincolnbrito/movies/actors
                 icon: icon-user

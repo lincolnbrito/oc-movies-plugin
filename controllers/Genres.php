@@ -14,6 +14,6 @@ class Genres extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('LincolnBrito.Movies', 'main-menu-item', 'side-menu-item');
+        BackendMenu::setContext('LincolnBrito.Movies', 'main-menu-item', 'side-menu-item2');
     }
 }

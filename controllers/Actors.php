@@ -14,6 +14,6 @@ class Actors extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('LincolnBrito.Movies', 'main-menu-item', 'side-menu-item2');
+        BackendMenu::setContext('LincolnBrito.Movies', 'main-menu-item', 'side-menu-item3');
     }
 }

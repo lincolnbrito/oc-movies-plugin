@@ -19,5 +19,6 @@ class Movies extends Controller
     {
         parent::__construct();
         BackendMenu::setContext('LincolnBrito.Movies', 'main-menu-item');
+        BackendMenu::setContext('LincolnBrito.Movies', 'main-menu-item',  'side-menu-item1');
     }
 }
