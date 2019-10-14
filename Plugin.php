@@ -6,6 +6,9 @@ class Plugin extends PluginBase
 {
     public function registerComponents()
     {
+        return [
+            'LincolnBrito\Movies\Components\Actors' => 'actors'
+        ];
     }
 
     public function registerSettings()
