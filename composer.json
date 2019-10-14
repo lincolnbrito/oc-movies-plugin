@@ -1,0 +1,24 @@
+{
+    "name": "lincolnbrito/oc-movies-plugin",
+    "type": "october-plugin",
+    "description": "Manage movies and actors",
+    "keywords": ["october", "cms", "movies", "plugin"],
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Lincoln Brito",
+            "email": "lincoln.sbrito@gmail.com",
+            "role": "Developer"
+        }        
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LincolnBrito\\Movies\\": ""
+        }
+    }   
+}
