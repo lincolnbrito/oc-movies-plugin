@@ -19,7 +19,7 @@ class Actorbox extends FormWidgetBase
         $this->vars['id'] = $this->model->id;
         $this->vars['actors'] = Actor::all()->lists('full_name','id');
         $this->vars['name'] = $this->getFieldName()."[]";
-        $this->vars['selectedValues'] = $this->getLoadValue();
+        $this->vars['selectedValues'] = !empty($this->getLoadValue()) ? $this->getLoadValue() : [];
     }
 
     public function render()
