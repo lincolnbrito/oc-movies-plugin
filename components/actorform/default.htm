@@ -1,0 +1,14 @@
+<form data-request="onSave">
+    
+    <label for="name">Actor name</label>
+    <input type="text" name="name" id="name" placeholder="Actor name" class="form-control">
+    
+    <label for="lastname">Actor lastname</label>
+    <input type="text" name="lastname" id="lastname" placeholder="Actor lastname" class="form-control">
+
+    <button type="submit" class="btn brn-lg btn-primary">Save actor</button>
+
+    {% flash success %}
+        <p class="alert alert-success">{{message}}</p>
+    {% endflash %}
+</form>

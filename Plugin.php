@@ -7,7 +7,8 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'LincolnBrito\Movies\Components\Actors' => 'actors'
+            'LincolnBrito\Movies\Components\Actors' => 'actors',
+            'LincolnBrito\Movies\Components\ActorForm' => 'actorform'
         ];
     }
 
