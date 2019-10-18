@@ -43,18 +43,31 @@ class Plugin extends PluginBase
                 // if ($relevance > 1 && $item->published_at) {
                 //     $relevance -= $this->getAgePenalty($item->published_at->diffInDays(Carbon::now()));
                 // }
-    
-                return [
-                    'title'     => $item->name,
-                    'text'      => $item->description,
-                    'url'       => '/movies/movie/' . $item->slug,
-                    // 'thumb'     => $item->images->first(), // Instance of System\Models\File
-                    'relevance' => $relevance, // higher relevance results in a higher
-                                               // position in the results listing
-                    // 'meta' => 'data',       // optional, any other information you want
-                                               // to associate with this result
-                    // 'model' => $item,       // optional, pass along the original model
-                ];
+                if($item->poster) {
+                    return [
+                        'title'     => $item->name,
+                        'text'      => $item->description,
+                        'url'       => '/movie/' . $item->slug,
+                        'thumb'     => $item->poster->first(), // Instance of System\Models\File
+                        'relevance' => $relevance, // higher relevance results in a higher
+                                                   // position in the results listing
+                        // 'meta' => 'data',       // optional, any other information you want
+                                                   // to associate with this result
+                        // 'model' => $item,       // optional, pass along the original model
+                    ];
+                } else {
+                    return [
+                        'title'     => $item->name,
+                        'text'      => $item->description,
+                        'url'       => '/movie/' . $item->slug,                        
+                        'relevance' => $relevance, // higher relevance results in a higher
+                                                   // position in the results listing
+                        // 'meta' => 'data',       // optional, any other information you want
+                                                   // to associate with this result
+                        // 'model' => $item,       // optional, pass along the original model
+                    ];
+                }
+                
             });
     
             return [
