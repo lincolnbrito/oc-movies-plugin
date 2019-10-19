@@ -21,6 +21,8 @@ class Actor extends Model
     public $rules = [
     ];
 
+    public $fillable = ['name', 'lastname'];
+
     public $belongsToMany = [
         'movies' => [
             'LincolnBrito\Movies\Models\Movie',
