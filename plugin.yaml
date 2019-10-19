@@ -9,16 +9,37 @@ navigation:
         label: Movies
         url: lincolnbrito/movies/movies
         icon: icon-video-camera
+        permissions:
+            - lincolnbrito.movies.manage_movies
         sideMenu:
             side-menu-item1:
                 label: Movies
                 url: lincolnbrito/movies/movies
                 icon: icon-video-camera
+                permissions:
+                    - lincolnbrito.movies.manage_movies
             side-menu-item2:
                 label: Genres
                 url: lincolnbrito/movies/genres
                 icon: icon-tag
+                permissions:
+                    - lincolnbrito.movies.manage_genres
             side-menu-item3:
                 label: Actors
                 url: lincolnbrito/movies/actors
                 icon: icon-user
+                permissions:
+                    - lincolnbrito.movies.manage_actors
+permissions:
+    lincolnbrito.movies.manage_movies:
+        tab: 'lincolnbrito.movies::lang.plugin.name'
+        label: 'lincolnbrito.movies::lang.permission.manage_movies'
+    lincolnbrito.movies.manage_genres:
+        tab: 'lincolnbrito.movies::lang.plugin.name'
+        label: 'lincolnbrito.movies::lang.permission.manage_genres'
+    lincolnbrito.movies.manage_actors:
+        tab: 'lincolnbrito.movies::lang.plugin.name'
+        label: 'lincolnbrito.movies::lang.permission.manage_actors'
+    lincolnbrito.movies.delete_movies:
+        tab: 'lincolnbrito.movies::lang.plugin.name'
+        label: 'lincolnbrito.movies::lang.permission.delete_movies'
