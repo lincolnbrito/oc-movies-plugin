@@ -1,6 +1,9 @@
 fields:
     name:
         label: 'Movie Title'
+        comment: 'Enter the <strong>complete</strong> movie title.'
+        # commentAbove: 'Enter the complete movie title'
+        commentHtml: true
         span: full
         type: text
     description:

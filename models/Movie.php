@@ -19,6 +19,9 @@ class Movie extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'name' => 'required',
+        'description' => 'required',
+        'year' => 'required'
     ];
 
     public $jsonable = ['actors'];

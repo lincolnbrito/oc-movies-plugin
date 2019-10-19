@@ -3,8 +3,15 @@ form: $/lincolnbrito/movies/models/movie/fields.yaml
 modelClass: LincolnBrito\Movies\Models\Movie
 defaultRedirect: lincolnbrito/movies/movies
 create:
+    title: New Movie
     redirect: 'lincolnbrito/movies/movies/update/:id'
     redirectClose: lincolnbrito/movies/movies
+    flashSave: Movie has been created!
 update:
+    title: Edit Movie
     redirect: lincolnbrito/movies/movies
     redirectClose: lincolnbrito/movies/movies
+    flashSave: Movie updated successfully!
+    flashDelete: Movie has been deleted.
+preview:
+    title: Preview Movie
