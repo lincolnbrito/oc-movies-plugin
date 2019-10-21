@@ -46,7 +46,8 @@ fields:
         nameFrom: genre_title
         descriptionFrom: description
         span: full
-        type: relation
+        type: partial
+        path: field_genre
     actors:
         label: Actors
         prompt: 'Add new item'

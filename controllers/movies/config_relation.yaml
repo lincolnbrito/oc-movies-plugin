@@ -1,0 +1,8 @@
+genres:
+  label: Genre
+  view:
+    list: $/lincolnbrito/movies/models/genre/columns.yaml
+    toolbarButtons: add|remove
+  manage:
+    form: $/lincolnbrito/movies/models/genre/fields.yaml
+    showCheckboxes: true
