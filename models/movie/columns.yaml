@@ -17,3 +17,9 @@ columns:
         type: text
         select: genre_title
         relation: genres
+    created_at:
+        label: 'Created '
+        type: datetime
+    published:
+        label: Published
+        type: switch

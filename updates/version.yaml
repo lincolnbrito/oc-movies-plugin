@@ -33,3 +33,6 @@
 1.0.12:
     - 'Seed movies'
     - seed.php
+1.0.13:
+    - 'Updated table lincolnbrito_movies_'
+    - builder_table_update_lincolnbrito_movies__5.php
