@@ -5,6 +5,7 @@ noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
 showCheckboxes: true
 recordsPerPage: 20
+filter: config_filter.yaml
 toolbar:
     buttons: list_toolbar
     search:
