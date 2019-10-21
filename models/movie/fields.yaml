@@ -52,7 +52,9 @@ fields:
         label: Actors
         prompt: 'Add new item'
         span: full
-        type: actorbox
+        # type: actorbox
+        type: partial
+        path: field_actor
     published:
         label: Published
         span: auto

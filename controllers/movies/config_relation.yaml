@@ -6,3 +6,14 @@ genres:
   manage:
     form: $/lincolnbrito/movies/models/genre/fields.yaml
     showCheckboxes: true
+actors:
+  label: Actors
+  view:
+    list: $/lincolnbrito/movies/models/actor/columns.yaml
+    toolbarButtons: add|remove
+    recordsPerPage: 10
+    # recordUrl: lincolnbrito/movies/actors/update/:id #se for usado deve remover manage abaixo
+  manage:
+    form: $/lincolnbrito/movies/models/actor/fields.yaml
+    showSearch: true
+    recordsPerPage: 10    
