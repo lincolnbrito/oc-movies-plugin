@@ -9,3 +9,7 @@ columns:
         type: text
         searchable: true
         sortable: true
+    fullname:
+        label: Fullname
+        type: text
+        select: 'concat(name, '' '', lastname)'
