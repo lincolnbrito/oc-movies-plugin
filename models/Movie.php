@@ -99,6 +99,11 @@ class Movie extends Model
             $query->where('year','=',$year);
         }
 
+        $lastPage = $query->paginate($perPage, $page)->lastPage();
+        if($lastPage < $page) {
+            $page=1;
+        }
+
         return $query->paginate($perPage, $page);
     }
 }
