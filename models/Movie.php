@@ -49,4 +49,31 @@ class Movie extends Model
             'order' => 'name'
         ]
     ];
+
+    public function scopeListFrontend($query, $options = [])
+    {
+        extract(array_merge([
+            'page' => 1,
+            'perPage' => 10,
+            'sort' => 'created_at desc',
+            'genres' => null,
+            'year' => ''
+        ], $options));
+
+        if($genres!==null ) {
+            if(!is_array($genres)) {
+                $genres = [$genres];
+            }
+
+            $query = $query->whereHas('genres', function($q) use($genres) {
+                $q->whereIn('id',$genres);
+            })  ;          
+        }
+
+        if($year) {
+            $query->where('year','=',$year);
+        }
+
+        return $query->paginate($perPage, $page);
+    }
 }
