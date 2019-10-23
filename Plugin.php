@@ -8,7 +8,8 @@ class Plugin extends PluginBase
     {
         return [
             'LincolnBrito\Movies\Components\Actors' => 'actors',
-            'LincolnBrito\Movies\Components\ActorForm' => 'actorform'
+            'LincolnBrito\Movies\Components\ActorForm' => 'actorform',
+            'LincolnBrito\Movies\Components\FilterMovies' => 'filtermovies'
         ];
     }
 

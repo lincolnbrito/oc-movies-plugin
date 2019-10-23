@@ -1,0 +1,50 @@
+{% set movies = filtermovies.movies %}
+{% set genres = filtermovies.genres %}
+{% set years = filtermovies.years %}
+
+<form action="{{ url('filter-movies') }}">
+    <div>
+        <label for="year"></label>
+        <select name="year" id="year">
+            <option value="">Select an year</option>
+            {% for year in years %}
+            <option value="{{year}}">{{year}}</option>
+            {% endfor %}
+        </select>
+
+        <label for="genre"></label>
+        <select name="genre" id="genre">
+            <option value="">Select a genre</option>
+            
+            {% for genre in genres %}
+            <option value="{{genre.slug}}">{{genre.genre_title}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+
+ <ul class="movie-list">
+    {% for movie in movies %}
+        <li>
+            {# Use spaceless tag to remove spaces inside the A tag. #}
+            <h3>   
+                <a href="/movie/{{ movie.slug }}">
+                {{movie.name}} - {{ movie.year }}
+                </a>
+            </h3>
+            
+            {{ html_limit(movie.description,150)|raw }}
+            <br><br>
+
+            {% for genre in movie.genres %}
+                <small>{{genre.genre_title}}</small>
+            {% endfor %}
+
+        </li>
+    {% else %}
+        <li class="no-data">No movies found.</li>
+    {% endfor %}
+</ul>
+
+{{movies.render|raw}}
