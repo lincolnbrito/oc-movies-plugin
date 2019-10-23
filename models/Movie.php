@@ -50,6 +50,13 @@ class Movie extends Model
         ]
     ];
 
+    public static $allowedSortingOptions = [
+        'name desc' => 'name desc',
+        'name asc' => 'name asc',
+        'year desc' => 'year desc',
+        'year asc' => 'year asc'
+    ];
+
     public function scopeListFrontend($query, $options = [])
     {
         extract(array_merge([
@@ -59,6 +66,24 @@ class Movie extends Model
             'genres' => null,
             'year' => ''
         ], $options));
+
+        if(!is_array($sort)) {
+            $sort = [$sort];           
+        }
+
+        foreach ($sort as $_sort) {
+            if(in_array($_sort, array_keys(self::$allowedSortingOptions))) {
+                $parts = explode(' ', $_sort);
+
+                if(count($parts) < 2) {
+                    array_push($parts, 'desc');
+                }
+
+                list($sortField, $sortDirection) = $parts;
+
+                $query = $query->orderBy($sortField, $sortDirection);
+            }
+        }
 
         if($genres!==null ) {
             if(!is_array($genres)) {
